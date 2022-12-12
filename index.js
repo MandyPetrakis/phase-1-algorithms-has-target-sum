@@ -1,17 +1,21 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    const complement = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === complement) return true;
+    }
+  }
+  return false;
 }
 
 /* 
-  Write the Big O time complexity of your function here
-*/
+add numbers together in an array and return true if any two of them add up to the target number 
 
-/* 
-  Add your pseudocode here
-*/
+psuedocode 
+add first number to each remaining number 
+compare to the target number
+add second number to each remaining number 
 
-/*
-  Add written explanation of your solution here
 */
 
 // You can run `node index.js` to view these console logs
